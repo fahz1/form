@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+The project is still under development - it is only the client side.
 ## Available Scripts
 
 In the project directory, you can run:
