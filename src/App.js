@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import EditForm from "./components/editform";
-import CreateForm from "./components/createform";
+import RadioButton from "./components/radiobutton";
 
 
 class App extends Component {
   render() {
     return (
-      <Router>
         <div className="container">
           <h3>Form Builder</h3>
-
+          <EditForm />
         </div>
-          <Route path="/" exact component={EditForm} />
-      </Router>
     );
   }
 }
