@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import EditForm from "./components/editform";
+import TextField from "./components/textfield";
 import RadioButton from "./components/radiobutton";
 
 
@@ -9,7 +9,8 @@ class App extends Component {
     return (
         <div className="container">
           <h3>Form Builder</h3>
-          <EditForm />
+          <TextField />
+          <RadioButton />
         </div>
     );
   }
