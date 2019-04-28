@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-export default class TextField extends React.Component {
+
+export default class Range extends React.Component {
   constructor() {
     super();
     this.state = { values: [] };
   }
+
+
 
   handleChange = (i, event) => {
     console.log('handle clicked test clear');
@@ -46,7 +49,7 @@ export default class TextField extends React.Component {
       return (
         <div key={i}>
           <input
-            type="text"
+            type="range" name="points" min="0" max="10"
             value={field.value || ''}
             onChange={this.updateFieldValue(i)}
           />
@@ -56,7 +59,7 @@ export default class TextField extends React.Component {
     return (
       <div className="container-fluid">
         <button type="button" onClick={this.handleAddfield} className="small">
-          Text field
+          Range
         </button>
 
 
