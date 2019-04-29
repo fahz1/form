@@ -52,23 +52,27 @@ export default class RadioButton extends React.Component {
             type="radio"
             value={field.value || ''}
             onChange={this.updateFieldValue(i)}
-          />
+          /> Option
         </div>
       );
     });
     return (
-      <div className="container-fluid">
-        <button type="button" onClick={this.handleAddfield} className="small">
-          Radio Button
-        </button>
-
-
-        <button type="button" onClick={this.handleClearfield} className="small">
-          x
-        </button>
-
-        {fields}
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9">
+                {fields}
+              </div>
+              <div class="col-md-3">
+                  <button type="button" onClick={this.handleAddfield} className="btn btn-light">
+                    Radio Button
+                  </button>
+                  <button type="button" onClick={this.handleClearfield} className="btn btn-link">
+                    x
+                  </button>
+              </div>
+          </div>
       </div>
+
     );
   }
 }

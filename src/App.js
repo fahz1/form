@@ -5,6 +5,9 @@ import RadioButton from "./components/radiobutton";
 import DateFeild from "./components/datefeild";
 import CheckBox from "./components/checkbox";
 import Range from "./components/range";
+import Header from "./components/header";
+import Footer from "./components/footer";
+
 
 class App extends Component {
   handleSaveform = () => {
@@ -14,16 +17,13 @@ class App extends Component {
   render() {
     return (
         <div className="container">
-          <h3>Form Builder</h3>
+          <Header />
           <TextField />
           <RadioButton />
-          <DateFeild/>
+          <DateFeild />
           <CheckBox />
           <Range />
-          <button type="button" onClick={this.handleSaveform} className="small">
-            Save Form
-          </button>
-
+          <Footer/>
         </div>
     );
   }

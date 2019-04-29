@@ -52,23 +52,27 @@ export default class Range extends React.Component {
             type="range" name="points" min="0" max="10"
             value={field.value || ''}
             onChange={this.updateFieldValue(i)}
-          />
+          /> Maximum Value
         </div>
       );
     });
     return (
-      <div className="container-fluid">
-        <button type="button" onClick={this.handleAddfield} className="small">
-          Range
-        </button>
-
-
-        <button type="button" onClick={this.handleClearfield} className="small">
-          x
-        </button>
-
-        {fields}
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9">
+                {fields}
+              </div>
+              <div class="col-md-3">
+                  <button type="button" onClick={this.handleAddfield} className="btn btn-light">
+                    Range
+                  </button>
+                  <button type="button" onClick={this.handleClearfield} className="btn btn-link">
+                    x
+                  </button>
+              </div>
+          </div>
       </div>
+
     );
   }
 }

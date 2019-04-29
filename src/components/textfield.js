@@ -34,7 +34,7 @@ export default class TextField extends React.Component {
      let values = [...this.state.values];
      values.splice(i,1);
      this.setState({ values });
-     console.log('should remove the added field');
+     // console.log('should remove the added field');
   };
 
   handleSaveform = () => {
@@ -49,23 +49,28 @@ export default class TextField extends React.Component {
             type="text"
             value={field.value || ''}
             onChange={this.updateFieldValue(i)}
+            placeholder="your text"
           />
         </div>
       );
     });
     return (
-      <div className="container-fluid">
-        <button type="button" onClick={this.handleAddfield} className="small">
-          Text field
-        </button>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-9">
+                  {fields}
+                  </div>
+                  <div class="col-md-3">
+                      <button type="button" onClick={this.handleAddfield} className="btn btn-light">
+                        Text field
+                      </button>
+                      <button type="button" onClick={this.handleClearfield} className="btn btn-link">
+                        x
+                      </button>
+                  </div>
+              </div>
+          </div>
 
-
-        <button type="button" onClick={this.handleClearfield} className="small">
-          x
-        </button>
-
-        {fields}
-      </div>
     );
   }
 }

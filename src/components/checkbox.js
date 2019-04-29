@@ -52,23 +52,27 @@ export default class CheckBox extends React.Component {
             type="checkbox"
             value={field.value || ''}
             onChange={this.updateFieldValue(i)}
-          />
+          /> Option 1
         </div>
       );
     });
     return (
-      <div className="container-fluid">
-        <button type="button" onClick={this.handleAddfield} className="small">
-          Check Box
-        </button>
-
-
-        <button type="button" onClick={this.handleClearfield} className="small">
-          x
-        </button>
-
-        {fields}
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9">
+                {fields}
+              </div>
+              <div class="col-md-3">
+                  <button type="button" onClick={this.handleAddfield} className="btn btn-light">
+                    CheckBox
+                  </button>
+                  <button type="button" onClick={this.handleClearfield} className="btn btn-link">
+                    x
+                  </button>
+              </div>
+          </div>
       </div>
+
     );
   }
 }

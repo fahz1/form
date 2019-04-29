@@ -57,18 +57,22 @@ export default class DateFeild extends React.Component {
       );
     });
     return (
-      <div className="container-fluid">
-        <button type="button" onClick={this.handleAddfield} className="small">
-          Date Feild
-        </button>
-
-
-        <button type="button" onClick={this.handleClearfield} className="small">
-          x
-        </button>
-
-        {fields}
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9">
+                {fields}
+              </div>
+              <div class="col-md-3">
+                  <button type="button" className="btn btn-light" onClick={this.handleAddfield}>
+                    Date field
+                  </button>
+                  <button type="button" onClick={this.handleClearfield} className="btn btn-link">
+                    x
+                  </button>
+              </div>
+          </div>
       </div>
+
     );
   }
 }
