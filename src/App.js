@@ -10,10 +10,7 @@ import Footer from "./components/footer";
 
 
 class App extends Component {
-  handleSaveform = () => {
-    console.log('will save this form using node API');
-  };
-
+  
   render() {
     return (
         <div className="container">

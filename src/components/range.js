@@ -57,12 +57,12 @@ export default class Range extends React.Component {
       );
     });
     return (
-      <div class="container">
-          <div class="row">
-              <div class="col-md-9">
+      <div className="container">
+          <div className="row">
+              <div className="col-md-9">
                 {fields}
               </div>
-              <div class="col-md-3">
+              <div className="col-md-3">
                   <button type="button" onClick={this.handleAddfield} className="btn btn-light">
                     Range
                   </button>
