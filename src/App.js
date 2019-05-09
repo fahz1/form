@@ -7,10 +7,11 @@ import CheckBox from "./components/checkbox";
 import Range from "./components/range";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import FormsList from "./components/forms-list";
 
 
 class App extends Component {
-  
+
   render() {
     return (
         <div className="container">
@@ -21,6 +22,7 @@ class App extends Component {
           <CheckBox />
           <Range />
           <Footer/>
+          <FormsList />
         </div>
     );
   }
